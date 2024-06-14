@@ -9,7 +9,7 @@ const Dashboard = () => {
                 <p className="text-neutralblue"></p>
                 
             
-            <div className='my-12 f;ex f;ex-wrap justify-between items-center gap-8'>
+            <div className='my-12 flex flex-wrap justify-between items-center gap-8'>
             <img src={wd} alt=""  className='w-3/12'/>   
             </div>
             

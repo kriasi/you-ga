@@ -1,10 +1,11 @@
-
-
 import React, { useState } from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-import { Pie } from 'react-chartjs-2';
+import { Bar, Pie } from 'react-chartjs-2';
+import { GrGraphQl } from 'react-icons/gr';
+import { PiGraphDuotone } from 'react-icons/pi';
+import { Line, LineChart, PieChart } from 'recharts';
 
 
 const MoodTracker = () => {
@@ -30,7 +31,7 @@ const MoodTracker = () => {
     setHunger(rating);
   };
 
-  const handleStressChange = (rating) => {
+const handleStressChange = (rating) => {
     setStress(rating);
   };
 
@@ -275,25 +276,23 @@ const Dashboard = ({
   productivity,
 }) => {
   const chartData = {
-    labels: ['Mood', 'Sleep', 'Hunger', 'Stress', 'Anxiety', 'Productivity'],
+    labels: ['Mood', 'Stress', 'Anxiety', 'Nervousness', 'Productivity'],
     datasets: [
       {
-        data: [mood, sleep, hunger, stress, anxiety, productivity],
+        data: [mood, stress, anxiety, nervousness, productivity],
         backgroundColor: [
-          '#FF6384',
-          '#36A2EB',
+          '#FF6380',
           '#FFCE56',
-          '#FF9F40',
+          '#FF9F45',
           '#8A2BE2',
           '#00FA9A',
         ],
         hoverBackgroundColor: [
-          '#FF6384',
+          '#FF9F40',
           '#36A2EB',
           '#FFCE56',
-          '#FF9F40',
-          '#8A2BE2',
-          '#00FA9A',
+          '#FFFF41',
+          '#FF6384',
         ],
       },
     ],
@@ -312,3 +311,5 @@ const Dashboard = ({
 };
 
 export default MoodTracker;
+
+
