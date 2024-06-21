@@ -3,7 +3,9 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, Legend);
 import { Pie } from 'react-chartjs-2';
 
-const PhysicalHealthTracker = () => {
+const PhysicalHealthTracker = ({ onSubmit }) => {
+
+
   const [physicalWork, setPhysicalWork] = useState(0);
   const [walking, setWalking] = useState(0);
   const [running, setRunning] = useState(0);
@@ -38,6 +40,7 @@ const PhysicalHealthTracker = () => {
 
   const handleSubmit = () => {
     setShowDashboard(true);
+    onSubmit({ physicalWork, walking, running, weights, cardio, lightWorkouts });
   };
 
   const activityLabels = ['Nil', 'Just Started', 'Constant', 'Better', 'Progressive'];

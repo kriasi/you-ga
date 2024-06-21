@@ -8,7 +8,7 @@ import { PiGraphDuotone } from 'react-icons/pi';
 import { Line, LineChart, PieChart } from 'recharts';
 
 
-const MoodTracker = () => {
+const MoodTracker = ({ onSubmit }) => {
   const [mood, setMood] = useState(0);
   const [sleep, setSleep] = useState(0);
   const [hunger, setHunger] = useState(0);
@@ -18,6 +18,7 @@ const MoodTracker = () => {
   const [productivity, setProductivity] = useState(0);
   const [askForHelp, setAskForHelp] = useState(false);
   const [showDashboard, setShowDashboard] = useState(false);
+
 
   const handleMoodChange = (rating) => {
     setMood(rating);
@@ -53,7 +54,10 @@ const handleStressChange = (rating) => {
 
   const handleSubmit = () => {
     setShowDashboard(true);
+    onSubmit({ mood, sleep, hunger, stress, anxiety, nervousness, productivity });
   };
+  
+  
 
   const moodLabels = ['Bad', 'Meh', 'Not Bad', 'Better', 'Great'];
   const moodEmojis = ['😞', '😐', '🙂', '😀', '😁'];
@@ -209,7 +213,7 @@ const handleStressChange = (rating) => {
               Your mood rating for today: {moodLabels[mood - 1]}
             </p>
           )}
-          {sleep > 0 && (
+          {/* {sleep > 0 && (
             <p className="text-gray-700 font-bold">
               Your sleep rating for today: {moodLabels[sleep - 1]}
             </p>
@@ -218,7 +222,7 @@ const handleStressChange = (rating) => {
             <p className="text-gray-700 font-bold">
               Your hunger rating for today: {moodLabels[hunger - 1]}
             </p>
-          )}
+          )} */}
           {stress > 0 && (
             <p className="text-gray-700 font-bold">
               Your stress rating for today: {moodLabels[stress - 1]}
@@ -253,8 +257,8 @@ const handleStressChange = (rating) => {
         ) : (
           <Dashboard
             mood={mood}
-            sleep={sleep}
-            hunger={hunger}
+            // sleep={sleep}
+            // hunger={hunger}
             stress={stress}
             anxiety={anxiety}
             nervousness={nervousness}
@@ -268,8 +272,8 @@ const handleStressChange = (rating) => {
 
 const Dashboard = ({
   mood,
-  sleep,
-  hunger,
+  // sleep,
+  // hunger,
   stress,
   anxiety,
   nervousness,
