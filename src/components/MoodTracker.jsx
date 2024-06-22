@@ -61,8 +61,6 @@ const handleStressChange = (rating) => {
 
   const moodLabels = ['Bad', 'Meh', 'Not Bad', 'Better', 'Great'];
   const moodEmojis = ['😞', '😐', '🙂', '😀', '😁'];
-  const sleepEmojis = ['😴', '😪', '😌', '😃', '😄'];
-  const hungerEmojis = ['😩', '😕', '😐', '😋', '😍'];
   const stressEmojis = ['😰', '😓', '😔', '😐', '😌'];
   const anxietyEmojis = ['😨', '😟', '😕', '😐', '😌'];
   const nervousnessEmojis = ['😬', '😟', '😕', '😐', '😌'];

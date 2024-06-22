@@ -58,7 +58,7 @@ const CombinedDashboard = ({ moodData, physicalData }) => {
       analysis += "Your overall mood seems low. Consider engaging in activities you enjoy or talking to someone you trust. ";
     }
 
-    if (stressAvg > 3.5) {
+    if (stressAvg < 3.5) {
       analysis += "You're experiencing high levels of stress and anxiety. Try some relaxation techniques or mindfulness exercises. ";
     }
 
