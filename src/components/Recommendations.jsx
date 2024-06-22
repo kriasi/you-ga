@@ -55,8 +55,8 @@ const Recommendations = ({ moodData, physicalData }) => {
   const recommendations = getRecommendations();
 
   return (
-    <div className="max-w-4xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg">
-      <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Personalized Recommendations</h2>
+    <div className="max-w-8xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg">
+      <h2 className="text-3xl font-bold mb-6 text-neutralBlue text-center text--800">Personalized Recommendations</h2>
       {recommendations.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {recommendations.map((rec, index) => (

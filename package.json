@@ -8,10 +8,10 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
-  
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
+    "@react-google-maps/api": "^2.19.3",
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.3",
     "chat.js": "^1.0.2",

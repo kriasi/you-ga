@@ -77,7 +77,7 @@ const CombinedDashboard = ({ moodData, physicalData }) => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-8">
-      <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg p-8">
+      <div className="max-w-6xl w-full bg-white shadow-lg rounded-lg p-8">
         <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Combined Dashboard</h1>
         <Bar data={data} options={options} className="mb-8" />
         <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-8" role="alert">

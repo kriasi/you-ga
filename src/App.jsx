@@ -10,6 +10,7 @@ import About from './components/About';
 import PhysicalHealthTracker from './components/PhysicalHealthTracker';
 import CombinedDashboard from './components/CombinedDashboard';
 import Recommendations from './components/Recommendations';
+import DocNearby from './components/DocNearby';
 import 'tailwindcss/tailwind.css';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
@@ -92,6 +93,9 @@ function App() {
           </div> */}
           <div className="bg-white rounded-lg shadow-md p-6">
           <Recommendations moodData={moodData} physicalData={physicalData} />
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-1">
+            <DocNearby />
           </div>
         </div>
         <About />
