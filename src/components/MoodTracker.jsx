@@ -67,7 +67,7 @@ const handleStressChange = (rating) => {
   const productivityEmojis = ['😴', '😪', '😐', '😃', '😄'];
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center h-screen bg-gray-100" id="moodtracker">
       <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-8">
         {!showDashboard ? (
           <>
@@ -302,7 +302,7 @@ const Dashboard = ({
 
   return (
     <>
-      <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">
+      <h1 className="text-2xl font-bold mb-6 text-center text-gray-800" id='/moodtracker'>
         Mood Tracker Dashboard
       </h1>
       <div className="mb-6">

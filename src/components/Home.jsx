@@ -7,13 +7,12 @@ import rcc from "../assets/rcc.jpg";
 import db3 from "../assets/db3.jpg";
 import rmm from "../assets/rmm.jpg";
 import doc from "../assets/doc.jpg";
-// import wwm from "../assets/wwm.jpg";
-// import ybs from "../assets/ybs.jpg";
+
 
 const Home = () => {
     return (
         <div className="bg-neutralSilver">
-        <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen">
+        <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen" id="/home">
           <Carousel className="w-full mx-auto"> 
            
             <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
@@ -47,17 +46,35 @@ const Home = () => {
             <div>
                 <img src={db3} alt="" />
                 </div>
+                <div className="md:w-1/2">
+                  <h1 className="text-4xl font-semibold mb-4 text-neutralBlue md:w-3?4 leading-snug">Dashboard
+                  <br></br><span className="text-3xl text-DarkBlue leading-snug">Transform Data Into Action </span></h1>
+                  <p className="text-orange text-base mb-8">Encourages users to understand the broader context of their data.</p>
+                  <button className="btn-primary">Visualize Now</button>
+                </div>
             </div>
 
             <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
             <div>
                 <img src={rcc} alt="" />
                 </div>
+                <div className="md:w-1/2">
+                  <h1 className="text-4xl font-semibold mb-4 text-neutralBlue md:w-3?4 leading-snug">Personalized Recommendations
+                  <br></br><span className="text-3xl text-DarkBlue leading-snug">Get Recommendations According To Your Needs</span></h1>
+                  <p className="text-orange text-base mb-8">"Find What Speaks to You: Recommendations Made Personal!"</p>
+                
+                </div>
             </div>
 
             <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
             <div>
                 <img src={doc} alt="" />
+                </div>
+                <div className="md:w-1/2">
+                  <h1 className="text-4xl font-semibold mb-4 text-neutralBlue md:w-3?4 leading-snug">Doctors Nearby
+                  <br></br><span className="text-3xl text-DarkBlue leading-snug">Select Your Doctors To Treat You Better</span></h1>
+                  <p className="text-orange text-base mb-8">Connecting You with Compassionate Care: Local Doctors at Your Service</p>
+                  <button className="btn-primary">Connect to Doctors</button>
                 </div>
             </div>
           </Carousel>

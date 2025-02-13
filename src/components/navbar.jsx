@@ -56,7 +56,7 @@ const Navbar = () => {
                 <ul className={`md:flex ${isMenuOpen ? 'block' : 'hidden'} space-x-12`}>
                     {navItems.map(({ link, path }) => (
                         <li key={path}>
-                            <a href={path} className="block text-base text-[#1E12ED] hover:text-brandPrimary font-medium">
+                            <a href={path} className="block cursor-pointer text-base text-[#1E12ED] hover:text-brandPrimary font-medium">
                                 {link}
                             </a>
                         </li>
